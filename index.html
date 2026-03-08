@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">SC</div>
+                <div class="brand-text">
+                    <!-- <h1>Learn with Arshyan</h1> -->
+                    <div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<template id="2M2i6tsZrdz5CNMveVdm"></template>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2094722033678002"
+     data-ad-slot="2248279416"></ins>
+<script type="bv_inline_delayed_js" bv_unique_id="urGjKhQ7F5kLCNHHJtgE" defer="1" data-cfasync="" bv_inline_delayed="1" async="">(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<p> SkyCast Dashboard</p>
+                </div>
+            </div>
+            <div class="search-area">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search city...">
+                </div>
+                <button class="search-btn" id="search-btn">
+                    <i class="fas fa-location-arrow"></i> Search
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="dashboard">
+                <div class="card current-weather">
+                    <div class="location-info">
+                        <h2 id="city-name">New York</h2>
+                        <p id="current-date">Friday, July 18, 2025</p>
+                    </div>
+
+                    <div class="weather-main">
+                        <div class="temperature" id="current-temp">24°</div>
+                        <div>
+                            <div class="weather-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="weather-description" id="weather-desc">Sunny</div>
+                        </div>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <div class="detail-text">
+                                <h4>Wind Speed</h4>
+                                <p id="wind-speed">12 km/h</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tint"></i>
+                            <div class="detail-text">
+                                <h4>Humidity</h4>
+                                <p id="humidity">65%</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-compress"></i>
+                            <div class="detail-text">
+                                <h4>Pressure</h4>
+                                <p id="pressure">1015 hPa</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-sun"></i>
+                            <div class="detail-text">
+                                <h4>UV Index</h4>
+                                <p id="uv-index">5.2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="unit-toggle">
+                        <button class="unit-btn active" id="celsius-btn">°C</button>
+                        <button class="unit-btn" id="fahrenheit-btn">°F</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="section-title"><i class="fas fa-info-circle"></i> Weather Details</h3>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fas fa-temperature-high"></i>
+                            <div class="detail-text">
+                                <h4>Feels Like</h4>
+                                <p id="feels-like">26°</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-eye"></i>
+                            <div class="detail-text">
+                                <h4>Visibility</h4>
+                                <p id="visibility">10 km</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-cloud"></i>
+                            <div class="detail-text">
+                                <h4>Cloud Cover</h4>
+                                <p id="cloud-cover">20%</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-sun"></i>
+                            <div class="detail-text">
+                                <h4>Sunrise</h4>
+                                <p id="sunrise">5:42 AM</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-moon"></i>
+                            <div class="detail-text">
+                                <h4>Sunset</h4>
+                                <p id="sunset">8:15 PM</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="detail-text">
+                                <h4>Last Update</h4>
+                                <p id="last-update">10:30 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-container">
+                <h3 class="section-title"><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h3>
+                <div class="forecast-cards" id="forecast-container">
+
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>| Weather Dashboard| &copy; 2026</p>
+        </footer>
+    </div>
+    <!-- <script type="bv_inline_delayed_js" bv_unique_id="Qwz8ZOUjFIrxTid2Tbo8" defer="1" data-cfasync="" async=""> -->
+        <script src="script.js"></script>
+    </body>
+    </html>
