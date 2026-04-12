@@ -26,8 +26,8 @@ let currentTempC = 0
 let currentFeelsC = 0
 
 
-const BASE_URL = "http://localhost:8000" 
-// deploy ke baad: https://your-backend-url.onrender.com
+const BASE_URL = "https://skylytics-backend.onrender.com" 
+
 
 async function getWeather(city) {
     const url = `${BASE_URL}/weather?city=${city}`
