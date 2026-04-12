@@ -65,8 +65,46 @@ async function getWeather(city) {
 }
 
 
-async function getForecast(city) {
-    forecastContainer.innerHTML = "<p>Forecast coming soon...</p>"
+
+
+
+async function getForecast(city){
+
+    try {
+        const response = await fetch(`${BASE_URL}/forecast?city=${city}`)
+        const data = await response.json()
+
+        forecastContainer.innerHTML = ""
+
+        for(let i=0; i<5; i++){
+
+            const dayData = data.list[i*8]
+
+            const date = new Date(dayData.dt * 1000)
+            const day = date.toLocaleDateString("en-US",{weekday:"short"})
+
+            const temp = Math.round(dayData.main.temp)
+            const icon = dayData.weather[0].icon
+
+            const forecastCard = document.createElement("div")
+            forecastCard.className="forecast-card"
+
+            forecastCard.innerHTML = `
+                <div class="forecast-day">${day}</div>
+                <div class="forecast-icon">
+                    <img src="https://openweathermap.org/img/wn/${icon}@2x.png">
+                </div>
+                <div class="forecast-temp">
+                    <span>${temp}°C</span>
+                </div>
+            `
+
+            forecastContainer.appendChild(forecastCard)
+        }
+
+    } catch (error) {
+        forecastContainer.innerHTML = "<p>Forecast not available</p>"
+    }
 }
 
 
